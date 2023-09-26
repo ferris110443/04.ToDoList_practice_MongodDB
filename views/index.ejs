@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todoList</title>
+    <link rel="stylesheet" href='/styles/style.css'>
+</head>
+<body>
+    <div class = 'container'>
+        <div class = 'app'>
+            <div class = 'title'>
+                <h2>To do List</h2>
+            </div>
+            <div class = "searchArea">
+                <form action="/" method="post">
+                    <input type="text" class="inputBx" name="inputBx" placeholder="Add Your Text">
+                    <input type="submit" class = 'inputBtn' value="Add">
+                </form>
+            </div>
+            <div class="ls">
+                <ul>
+                    <% if (data) { %>
+                        <% data.forEach((items)=>{ %>
+                            <li><%=items.todo %> <span class="delete-items <%=items._id%>"> DEL</span></li>
+                        <%})%>
+                    <% } %>                       
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        const deleteBtn = document.querySelectorAll(".delete-items");
+        deleteBtn.forEach((button) => {
+            button.addEventListener("click",()=>{
+                const endPoint = `/${button.classList[1]}`;
+                fetch(endPoint,{method:"Delete"})
+                    .then(response => {
+                        console.log(response)
+                        if (response) {
+                            button.parentElement.remove();
+                        } else {
+                            console.error('Failed to delete item');
+                        }
+                    })
+                    .catch(error => {
+                        console.error(error);
+                    });
+                
+            })
+        })
+    </script>
+</body>
+
+
+</html>

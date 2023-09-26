@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    position: absolute;
+    width:100%;
+    min-height: 100vh;
+    background-color:rgb(3, 3, 99);
+    display: flex;
+    justify-content: center;
+}
+
+.container .app{
+    position: relative;
+    background-color: #fff;
+    margin:10px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 20px;
+    width: 600px;
+}
+
+
+.container .app .title{
+    text-align: center;
+}
+
+
+.container .app .searchArea form{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+    background:rgb(208, 201, 201);
+    border-radius: 50px;
+
+}
+
+
+
+.container .app .searchArea form .inputBx{
+    width: 100%;
+    background: transparent;
+    border-style: none;
+    text-align: left;
+    color: #000;
+    width: 100%;
+    padding-left: 20px;
+    outline: transparent;
+    height: 50px;
+}
+
+.container .app .searchArea form .inputBtn{
+    background: #ff9305;
+    border-style: none;
+    border-radius: 50px;
+    color: #fff;
+
+    width: 20%;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.container  .app .searchArea form .inputBx::placeholder {
+    color: #8e8c8c;
+    font-size: 16px;
+}
+
+
+.container .ls ul li{
+    list-style: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top:20px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.container .ls ul li{
+    font-size: 20px;
+    width: 100%;
+}
+
+.container .ls ul span{
+    background-color: red;
+    width: 10%;
+    text-align: center;
+    color: #fff;
+
+}
+
+
+.container .ls ul a:hover{
+    cursor: pointer;
+}
