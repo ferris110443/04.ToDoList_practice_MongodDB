@@ -94,6 +94,6 @@
 }
 
 
-.container .ls ul a:hover{
+.container .ls ul li span:hover{
     cursor: pointer;
 }
