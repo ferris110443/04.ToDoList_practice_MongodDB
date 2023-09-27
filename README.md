@@ -17,5 +17,8 @@ Readme template 練習
 `const dbURL = "mongodb://0.0.0.0:27017/userDB";`
 
 5. open localhost
+`http://localhost:3000/`
+
+
 
 
